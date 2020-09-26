@@ -17,11 +17,11 @@ import pickle
 import gzip
 
 # load the model from disk
-filename = '/content/drive/My Drive/Files need to download/pickle.pkl'
+filename = '/content/drive/My Drive/Files need to download/pickle.pickle'
 #clf=pickle.load(open('pickle.pkl','rb'))
 with open(filename, 'rb') as ifp:
   clf=joblib.load(ifp)
-with open('/content/drive/My Drive/Files need to download/transform.pkl', 'rb') as pfp:
+with open('/content/drive/My Drive/Files need to download/transform.pickle', 'rb') as pfp:
   cv= joblib.load(pfp)
 
 app = Flask(__name__)
